@@ -12,6 +12,7 @@
     padding: 60px 31px;
     &--bg {
       height: 496px;
+      // en la ruta ../ debido a un problema con pages de github
       background-image: url(../images/mobile/contacts-bg.webp);
       background-repeat: no-repeat;
       background-size: cover;
