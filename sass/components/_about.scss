@@ -1,0 +1,133 @@
+.about {
+  &__container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &__images {
+    display: none;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: $desc-fs;
+    font-weight: $desc-fw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      background-color: $primary-black-text;
+    }
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: $headline-fw;
+    letter-spacing: 0.05em;
+    text-wrap: balance;
+  }
+  &__text {
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    color: $secondary-black-text;
+
+    &--size {
+      font-size: $secondary-fs;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+}
+
+@include tablet {
+  .about {
+    &__images {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__img {
+      &--desktop {
+        display: none;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__desc {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: $desc-fs;
+      font-weight: $desc-fw;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 1px;
+        background-color: $primary-black-text;
+      }
+    }
+    &__title {
+      font-size: 28px;
+      font-weight: $headline-fw;
+      letter-spacing: 0.05em;
+      text-wrap: balance;
+    }
+    &__text {
+      letter-spacing: 0.02em;
+      line-height: 26px;
+      color: $secondary-black-text;
+
+      &--size {
+        font-size: $secondary-fs;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .about {
+    &__images {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+    &__img {
+      display: none;
+      &--desktop {
+        display: flex;
+      }
+    }
+    &__title {
+      font-size: 42px;
+      font-weight: $headline-fw;
+      letter-spacing: 0.05em;
+      text-wrap: balance;
+    }
+    &__text {
+      letter-spacing: 0.02em;
+      line-height: 26px;
+      color: $secondary-black-text;
+
+      &--size {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}

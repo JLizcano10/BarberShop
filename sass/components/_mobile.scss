@@ -1,0 +1,19 @@
+.mobile {
+  &__icon {
+    &--menu {
+      width: 38px;
+      height: 32px;
+      fill: $main-bg;
+
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+      }
+    }
+  }
+}
+
+// @include desktop {
+//   .mobile {
+//   }
+// }

@@ -1,0 +1,190 @@
+.hero {
+  width: 100%;
+  height: 580px;
+
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    // gradiente personalizado porque en figma dicen 0.2 y es muy poco.
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.5),
+        rgba(25, 28, 38, 0.5)
+      ),
+      url(../../images/mobile/Slider-img-3.webp);
+    padding-left: 31px;
+  }
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 306px;
+    height: 189px;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: $desc-fs;
+    font-weight: $desc-fw;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(157, 164, 189, 0.6);
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 60px;
+      height: 1px;
+      background-color: $main-white-text;
+    }
+  }
+  &__title {
+    font-family: $headline-font-family;
+    font-weight: $headline-fw;
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    color: $main-white-text;
+  }
+  &__text {
+    font-size: $secondary-fs;
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    color: $secondary-white-text;
+    text-wrap: pretty;
+  }
+}
+
+// Aqui no tiene sentido porque esta restringido por el espacio de content
+/*
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    &__content {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.5),
+          rgba(25, 28, 38, 0.5)
+        ),
+        url(../../images/mobile/Slider-img-3@2x.webp);
+    }
+  }
+}
+*/
+@include tablet {
+  .hero {
+    width: 100%;
+    height: 680px;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding-left: 31px;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      // width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.5),
+          rgba(25, 28, 38, 0.5)
+        ),
+        url(../../images/tablet/Slider-img-3.webp);
+      padding-left: 0;
+      padding-top: 70px;
+    }
+    &__textbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 355px;
+      height: 163px;
+      padding-left: 15px;
+    }
+
+    &__description {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: $desc-fs;
+      font-weight: $desc-fw;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(157, 164, 189, 0.6);
+
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: $main-white-text;
+      }
+    }
+    &__title {
+      font-family: $headline-font-family;
+      font-weight: $headline-fw;
+      font-size: 48px;
+      letter-spacing: 0.05em;
+      color: $main-white-text;
+    }
+    &__text {
+      font-size: $secondary-fs;
+      letter-spacing: 0.02em;
+      line-height: 26px;
+      color: $secondary-white-text;
+      text-wrap: pretty;
+    }
+  }
+}
+
+@include desktop {
+  .hero {
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      // width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.5),
+          rgba(25, 28, 38, 0.5)
+        ),
+        url(../../images/desktop/Slider-img-3.webp);
+      padding-left: 106px;
+      padding-top: 70px;
+    }
+    &__textbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 500px;
+      height: 202px;
+      padding-left: 0;
+    }
+
+    &__title {
+      font-size: 72px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.header-page {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  background-color: transparent;
+  // width definido para que el navbar no se mueva mucho al aumentar el ancho de la ventana ya que de base lo define como este en el responsive? 480px?
+  width: 100%;
+  &__container {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    &--black {
+      display: none;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  &__list {
+    display: none;
+  }
+}
+
+.booking {
+  display: none;
+}
+
+@include tablet {
+  .header-page {
+    // position: absolute;
+    // display: flex;
+    // height: 100px;
+    // z-index: 5;
+    // background-color: transparent;
+    // &__container {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    // }
+
+    &__logo {
+      display: none;
+      &--black {
+        display: block;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .navbar {
+    gap: 130px;
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+    // &__item {
+    // }
+    &__link {
+      font-size: 12px;
+      font-weight: $desc-fw;
+      color: $main-white-text;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+
+  .booking {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &__link {
+      font-size: 11px;
+      font-weight: $desc-fw;
+      color: $main-white-text;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
+    }
+  }
+}

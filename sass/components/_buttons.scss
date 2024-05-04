@@ -1,0 +1,52 @@
+.btn {
+  width: 160px;
+  height: 40px;
+  font-family: $main-font-family;
+  font-size: 11px;
+  font-weight: $desc-fw;
+  letter-spacing: 0.09em;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid $hover-color;
+  border-radius: 25px;
+  color: $main-white-text;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
+
+  &--text-color {
+    color: $primary-black-text;
+
+    &:hover,
+    &:focus {
+      color: $main-white-text;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+@include desktop {
+  .btn {
+    border-radius: 0;
+    &__mobile {
+      display: none;
+    }
+  }
+}

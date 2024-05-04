@@ -1,0 +1,62 @@
+.portfolio {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: $desc-fs;
+    font-weight: $desc-fw;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      background-color: $primary-black-text;
+    }
+  }
+  &__title {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  //   Esto mientras pongo la etiqueta de las fotos en diferentes tamaños
+  &__item {
+    width: 418px;
+    height: 360px;
+  }
+}
+
+@include tablet {
+  .portfolio {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    &__item {
+      width: 330px;
+    }
+  }
+}
+
+@include desktop {
+  .portfolio {
+    &__item {
+      width: 270px;
+    }
+  }
+}

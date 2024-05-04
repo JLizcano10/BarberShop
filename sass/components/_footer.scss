@@ -1,0 +1,28 @@
+.footer-page {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 138px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@include tablet {
+  .footer-page {
+    &__container {
+      align-items: center;
+      height: 127px;
+    }
+
+    &__copyright {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.sidebar {
+  &--header {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    width: 270px;
+    height: 15px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      background-color: $primary-black-text;
+    }
+  }
+
+  &__link {
+    font-size: $desc-fs;
+    font-weight: $desc-fw;
+    letter-spacing: 0.2em;
+    color: $primary-black-text;
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+  }
+}
+
+@include tablet {
+  .sidebar {
+    &--header {
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      width: 90px;
+      height: 100%;
+    }
+
+    &__list {
+      &--header {
+        transform: rotateZ(-90deg) translateX(130px) translateY(-14px);
+      }
+    }
+  }
+}
