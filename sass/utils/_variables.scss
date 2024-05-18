@@ -1,16 +1,23 @@
-$main-bg: #ffffff;
-$barbers-section-bg: #f7f7f7;
-$terciary-bg: #191c26;
-$primary-black-text: #303030;
-$secondary-black-text: #555555;
-$main-white-text: #ffffff;
-$secondary-white-text: #9da4bd;
+// Colors
+$main-bg: rgb(255, 255, 255);
+$barbers-section-bg: rgb(247, 247, 247);
+$terciary-bg: rgb(25, 28, 38);
+$primary-black-text: rgb(48, 48, 48);
+$secondary-black-text: rgb(85, 85, 85);
+$main-white-text: rgb(255, 255, 255);
+$secondary-white-text: rgb(157, 164, 189);
+$hover-color: rgb(255, 108, 0);
+
+// Font Families
 $main-font-family: "Open Sans", sans-serif;
-$headline-font-family: "Raleway", sans-serif;
+$headline-font-family: Raleway, sans-serif;
+
+// Font Sizes
 $main-fs: 14px;
 $desc-fs: 11px;
 $secondary-fs: 16px;
+
+// Font Weights
 $main-fw: 400;
 $desc-fw: 600;
 $headline-fw: 700;
-$hover-color: #ff6c00;
