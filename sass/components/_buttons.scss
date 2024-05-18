@@ -26,27 +26,25 @@
       color: $main-white-text;
     }
   }
+}
 
-  &__mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
-  }
+.burger-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 @include desktop {
   .btn {
     border-radius: 0;
-    &__mobile {
-      display: none;
-    }
+  }
+
+  .burger-btn {
+    display: none;
   }
 }
