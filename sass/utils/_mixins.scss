@@ -1,3 +1,15 @@
+// Flex mixin. En algunos no necesitare el direction asi que uso el enfoque Named arguments.
+// &__container {
+//   @include flex-mixin($justify: space-between, $align: center);
+//   height: 100px;
+// }
+@mixin flex-mixin($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+// Responsive mixins
 @mixin tablet {
   @media only screen and (min-width: 767px) {
     @content;

@@ -29,13 +29,11 @@
 }
 
 .burger-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-mixin($align: center);
   width: 40px;
   height: 40px;
   border: none;
-  background-color: grey;
+  background-color: transparent;
   cursor: pointer;
 }
 

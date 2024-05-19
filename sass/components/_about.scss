@@ -1,30 +1,24 @@
 .about {
   &__container {
-    display: flex;
+    @include flex-mixin($align: center);
     gap: 30px;
-    align-items: center;
   }
   &__images {
     display: none;
   }
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-mixin($direction: column);
     gap: 15px;
   }
   &__desc {
-    display: flex;
-    align-items: center;
+    @include flex-mixin($align: center);
     gap: 10px;
     font-size: $desc-fs;
     font-weight: $desc-fw;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     &::before {
-      content: "";
-      display: inline-block;
-      width: 60px;
-      height: 1px;
+      @extend %line-before;
       background-color: $primary-black-text;
     }
   }
@@ -52,49 +46,12 @@
 @include tablet {
   .about {
     &__images {
-      display: flex;
-      flex-direction: column;
+      @include flex-mixin($direction: column);
       gap: 15px;
     }
     &__img {
       &--desktop {
         display: none;
-      }
-    }
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    &__desc {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: $desc-fs;
-      font-weight: $desc-fw;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      &::before {
-        content: "";
-        display: inline-block;
-        width: 60px;
-        height: 1px;
-        background-color: $primary-black-text;
-      }
-    }
-    &__title {
-      font-size: 28px;
-      font-weight: $headline-fw;
-      letter-spacing: 0.05em;
-      text-wrap: balance;
-    }
-    &__text {
-      letter-spacing: 0.02em;
-      line-height: 26px;
-      color: $secondary-black-text;
-
-      &--size {
-        font-size: $secondary-fs;
       }
     }
   }
@@ -103,9 +60,7 @@
 @include desktop {
   .about {
     &__images {
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
+      @include flex-mixin($direction: row);
     }
     &__img {
       display: none;
@@ -115,15 +70,9 @@
     }
     &__title {
       font-size: 42px;
-      font-weight: $headline-fw;
-      letter-spacing: 0.05em;
-      text-wrap: balance;
     }
-    &__text {
-      letter-spacing: 0.02em;
-      line-height: 26px;
-      color: $secondary-black-text;
 
+    &__text {
       &--size {
         font-size: 18px;
         line-height: 30px;

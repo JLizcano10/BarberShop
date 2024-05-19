@@ -3,17 +3,13 @@
     display: none;
   }
   &__list {
-    display: flex;
-    align-items: center;
+    @include flex-mixin($align: center);
     gap: 35px;
     width: 270px;
     height: 15px;
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 60px;
-      height: 1px;
+      @extend %line-before;
       background-color: $primary-black-text;
     }
   }
@@ -33,9 +29,7 @@
 @include tablet {
   .sidebar {
     &--header {
-      display: flex;
-      justify-content: center;
-      align-items: end;
+      @include flex-mixin($justify: center, $align: flex-end);
       width: 90px;
       height: 100%;
     }
