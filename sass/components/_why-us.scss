@@ -1,17 +1,14 @@
 .why-us {
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-mixin($direction: column);
     gap: 30px;
   }
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-mixin($direction: column);
     gap: 30px;
   }
   &__desc {
-    display: flex;
-    align-items: center;
+    @include flex-mixin($align: center);
     gap: 10px;
     width: 272px;
     font-size: $desc-fs;
@@ -20,10 +17,7 @@
     text-transform: uppercase;
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 60px;
-      height: 1px;
+      @extend %line-before;
       background-color: $primary-black-text;
     }
   }
@@ -44,8 +38,8 @@
   }
 
   &__box {
-    display: flex;
-    justify-content: flex-end;
+    @include flex-mixin($justify: flex-end);
+    width: 100%;
     gap: 30px;
     height: 331px;
   }
@@ -57,9 +51,7 @@
     // grid-auto-rows: minmax(auto, 1fr);
     // column-gap: 20px;
     // max-height: 331px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include flex-mixin($direction: column, $justify: flex-start);
     gap: 30px;
 
     &--end {
@@ -67,10 +59,7 @@
     }
   }
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-mixin(column, center, center);
     gap: 5px;
     width: 194px;
     height: 133px;
@@ -97,8 +86,8 @@
     }
   }
   &__number {
-    display: flex;
-    align-items: flex-start;
+    @include flex-mixin($align: flex-start);
+
     font-size: 42px;
     font-weight: $headline-fw;
     letter-spacing: 0.05em;
@@ -136,9 +125,13 @@
 @include desktop {
   .why-us {
     &__container {
-      flex-direction: row-reverse;
-      justify-content: space-around;
-      align-items: flex-start;
+      @include flex-mixin(row-reverse, center, flex-start);
+      gap: 90px;
+    }
+
+    &__box {
+      justify-content: flex-start;
+      width: 460px;
     }
 
     &__title {

@@ -1,13 +1,13 @@
 .footer-page {
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @include flex-mixin($justify: space-between);
     height: 138px;
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
   &__copyright {
+    @include flex-mixin($align: flex-end);
     display: flex;
     align-items: flex-end;
   }
@@ -21,7 +21,6 @@
     }
 
     &__copyright {
-      display: flex;
       align-items: center;
     }
   }

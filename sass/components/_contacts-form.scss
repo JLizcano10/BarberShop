@@ -1,6 +1,7 @@
 .contacts-form {
-  display: flex;
-  flex-direction: column;
+  @include flex-mixin($direction: column);
+  // display: flex;
+  // flex-direction: column;
   gap: 30px;
   height: 296px;
   &__input {

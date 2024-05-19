@@ -1,6 +1,5 @@
 .services {
-  display: flex;
-  align-items: center;
+  @include flex-mixin($align: center);
   width: 100%;
   height: 890px;
   background-image: url(../images/mobile/servicebg.webp);
@@ -10,13 +9,11 @@
   background-size: cover;
 
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-mixin($direction: column);
     gap: 20px;
   }
   &__desc {
-    display: flex;
-    align-items: center;
+    @include flex-mixin($align: center);
     gap: 10px;
     width: 272px;
     font-size: $desc-fs;
@@ -26,10 +23,7 @@
     color: rgba(157, 164, 189, 0.6);
 
     &::before {
-      content: "";
-      display: inline-block;
-      width: 60px;
-      height: 1px;
+      @extend %line-before;
       background-color: rgba(157, 164, 189, 0.6);
     }
   }
@@ -41,8 +35,8 @@
   }
 
   &__btn-box {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    @include flex-mixin($justify: center);
   }
 }
 
@@ -172,10 +166,6 @@
     height: 240px;
     padding: 0px;
     &__body {
-      display: grid;
-      grid-template-columns: 1fr;
-      // grid-auto-rows: repeat(4, 1fr);
-      align-content: space-around;
       column-gap: 25px;
       width: 100%;
       height: 240px;
@@ -188,7 +178,6 @@
           rgba(9, 11, 19, 1),
           rgba(9, 11, 19, 0.2)
         );
-        // rgba(9, 11, 19, 1);
       }
     }
 
