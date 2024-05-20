@@ -91,7 +91,7 @@
   }
   &__simbol {
     font-size: 16px;
-    font-weight: $desc-fw;
+    font-weight: $lead-fw;
     color: $hover-color;
   }
 
@@ -100,8 +100,8 @@
     color: $main-white-text;
   }
   &__subtext {
-    font-size: $desc-fs;
-    font-weight: $desc-fs;
+    font-size: $lead-fs;
+    font-weight: $lead-fs;
     text-align: center;
   }
 }

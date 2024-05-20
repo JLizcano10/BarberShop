@@ -30,8 +30,8 @@
   &__lead {
     @include flex-mixin($align: center);
     gap: 10px;
-    font-size: $desc-fs;
-    font-weight: $desc-fw;
+    font-size: $lead-fs;
+    font-weight: $lead-fw;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: rgba(157, 164, 189, 0.6);
