@@ -27,7 +27,7 @@
     height: 189px;
   }
 
-  &__description {
+  &__lead {
     @include flex-mixin($align: center);
     gap: 10px;
     font-size: $desc-fs;

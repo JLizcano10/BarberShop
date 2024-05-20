@@ -5,3 +5,10 @@
   width: 60px;
   height: 1px;
 }
+
+%lead-text {
+  font-size: $desc-fs;
+  font-weight: $desc-fw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

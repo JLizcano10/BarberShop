@@ -12,14 +12,11 @@
     @include flex-mixin($direction: column);
     gap: 20px;
   }
-  &__desc {
+  &__lead {
     @include flex-mixin($align: center);
     gap: 10px;
     width: 272px;
-    font-size: $desc-fs;
-    font-weight: $desc-fw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @extend %lead-text;
     color: rgba(157, 164, 189, 0.6);
 
     &::before {
@@ -115,7 +112,7 @@
     &__container {
       gap: 30px;
     }
-    &__desc {
+    &__lead {
       width: 428px;
     }
     &__title {
@@ -152,7 +149,7 @@
       justify-content: center;
       gap: 30px;
     }
-    &__desc {
+    &__lead {
       width: 428px;
     }
     &__title {

@@ -10,13 +10,10 @@
     @include flex-mixin($direction: column);
     gap: 15px;
   }
-  &__desc {
+  &__lead {
     @include flex-mixin($align: center);
     gap: 10px;
-    font-size: $desc-fs;
-    font-weight: $desc-fw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @extend %lead-text;
     &::before {
       @extend %line-before;
       background-color: $primary-black-text;

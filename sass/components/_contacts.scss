@@ -62,10 +62,7 @@
   &__text {
     @include flex-mixin($align: center);
     gap: 10px;
-    font-size: $desc-fs;
-    font-weight: $desc-fw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @extend %lead-text;
     color: $main-white-text;
 
     &::before {
