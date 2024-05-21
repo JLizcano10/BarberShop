@@ -46,8 +46,9 @@
       display: flex;
       gap: 30px;
     }
-    // &__item {
-    // }
+    &__item {
+      flex-basis: calc((100% - 90px) / 4);
+    }
     &__link {
       font-size: 12px;
       font-weight: $lead-fw;
@@ -65,6 +66,10 @@
   .booking {
     @include flex-mixin($align: center);
     gap: 30px;
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
 
     &__link {
       font-size: 11px;
