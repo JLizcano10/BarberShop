@@ -42,14 +42,17 @@
 @include desktop {
   .navbar {
     gap: 130px;
+    width: 850px;
     &__list {
       display: flex;
       gap: 30px;
     }
-    &__item {
-      flex-basis: calc((100% - 90px) / 4);
-    }
+    // Para que el segundo link no se pase a dos lineas
+    // &__item {
+    //   flex-basis: calc((100% - 90px) / 4);
+    // }
     &__link {
+      display: block;
       font-size: 12px;
       font-weight: $lead-fw;
       color: $main-white-text;
